@@ -1,0 +1,36 @@
+Sub Entradas_ingreso()
+'
+' Entradas_ingreso Macro
+'
+
+'
+    Range("A2").Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Copy
+    Sheets("Entradas_hist").Select
+    Range("A3").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+End Sub
+
+
+Sub Entradas_test()
+
+    Dim hist As ListObject
+    Set hist = ThisWorkbook.Sheets("Entradas_hist").ListObjects("entradas_hist")
+    
+    Dim histRow As Long
+    histRow = hist.Range.Rows(hist.Range.Rows.Count).Row
+    histRow = histRow + 1
+    MsgBox (histRow)
+    
+    
+    Dim entry As ListObject
+    Set entry = ThisWorkbook.Sheets("Entradas_INVENTARIO").ListObjects("entradas_inv")
+    
+    Dim entryTable As Long
+    entryTable = entry.Range(
+    'MsgBox (histRow)
+
+End Sub
