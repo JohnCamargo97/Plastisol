@@ -21,6 +21,7 @@ const Axios = () => {
         {data.map((item) => (
           <ul key={item.id} className="contenedor-lista">
 
+            <li>ID: {item.id}</li>
             <li>ID Producto: {item.product_id}</li>
             <li>Categoria: {item.category}</li>
             <li>Descripción: {item.description}</li>
