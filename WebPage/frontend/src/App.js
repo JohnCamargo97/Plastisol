@@ -1,17 +1,21 @@
 import React from 'react';
-import Axios from '../src/Componentes/Axios/axios';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Axios from './Api/Axios/axios';
+import { Home } from './Paginas/Home';
+import { Perfil } from './Paginas/Perfil';
+
 import './App.css'
 
 function App() {
   return (
-    <div className="App">
-
-    <Axios/>
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={< Navigate to='/Home' />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/perfil' element={<Perfil />} />
+      </Routes>
+    </BrowserRouter>
   );
-
-
 }
 
 export default App;
