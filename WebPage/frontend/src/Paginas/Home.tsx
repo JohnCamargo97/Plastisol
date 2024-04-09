@@ -1,6 +1,11 @@
+import { Header } from '../Componentes/Header'
+
 export function Home(){
 
     return (
-        <div>Pagina HOME</div>
+        <div>
+            Pagina HOME
+            <Header />
+        </div>
     )
 }
