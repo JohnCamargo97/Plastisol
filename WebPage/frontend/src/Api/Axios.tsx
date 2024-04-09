@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Axios.css";
 
 const Axios = () => {
   const [data, setData] = useState([]);
@@ -37,4 +36,3 @@ const Axios = () => {
 };
 
 export default Axios;
-

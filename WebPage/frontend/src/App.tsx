@@ -1,6 +1,4 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Axios from './Api/Axios/axios';
 import { Home } from './Paginas/Home';
 import { Perfil } from './Paginas/Perfil';
 
