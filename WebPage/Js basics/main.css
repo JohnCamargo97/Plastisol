@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(247, 247, 247);
+}
+
+.product--card{
+    background-color: rgb(238, 241, 243);
+    max-width: 600px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.product--edit{
+    max-width: 600px;
+    border-radius: 5px;    
+}
+
+.product--card-form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-product{
+
+    max-width: 300px;
+    padding: 5px;
+}
+
+.form-element{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-buttons{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
