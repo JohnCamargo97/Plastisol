@@ -5,9 +5,13 @@ export function Header(){
 
     return (
 
-        <header className="bg-red-500 flex place-content-between">
-            <img className='w-32 h-32' src={logo} alt="Logo" />
+        <>
+
+        <header className="flex place-content-between items-center">
+            <img className='w-[60px] h-[60px]' src={logo} alt="Logo" />
             <NavBar />
         </header>
+
+        </>
     )
 }
