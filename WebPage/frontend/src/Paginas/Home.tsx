@@ -9,7 +9,7 @@ export function Home(){
         <>
             <Header />
 
-            <section className='pt-6 sm:flex sm:gap-8'>
+            <section className='pt-6 lg:flex lg:gap-8'>
 
                 <MainArticle />
                 <ContenedorArticulos />

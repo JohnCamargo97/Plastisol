@@ -14,7 +14,7 @@ export function MainArticle(){
                 </div>
             </picture>
 
-            <div className='sm:flex'>
+            <div className='sm:flex sm:justify-center sm:items-center sm:h-[400px]'>
                 <div className='flex-1 py-6'>
                     <h2 className='text-[40px] font-bold sm:text-[50px] leading-none'>Lorem, ipsum dolor sit amet consectetur?</h2>
                 </div>

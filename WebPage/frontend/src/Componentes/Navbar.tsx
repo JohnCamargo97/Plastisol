@@ -6,22 +6,19 @@ export function NavBar(){
 
         <>
 
-        <ul className="w-50 hidden sm:flex text-[18px] sm:w-[438px] sm:place-content-around sm:items-center">
+        <ul className="w-50 hidden sm:flex text-[18px] sm:w-[438px] sm:place-content-around sm:items-center font-semibold">
 
             <li>
-                <a href="#">Inicio</a>
+                <a href="#">Llamanos</a>
+            </li>
+            <li>
+                <a href="#">Carrrito</a>
             </li>
             <li>
                 <a href="#">Registrarse</a>
             </li>
             <li>
-                <a href="#">Perfil</a>
-            </li>
-            <li>
-                <a href="#">Compras</a>
-            </li>
-            <li>
-                <a href="#">Llamanos</a>
+                <a href="#">Iniciar Sesión</a>
             </li>
 
         </ul>

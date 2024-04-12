@@ -10,12 +10,12 @@ export function ContenedorProductos(){
 
         <>
         
-        <section className="mt-10">
+        <section className="mt-10 lg:flex sm:mt-20">
             <Productos 
                 img={imgCafeUno}
                 numero='01'
                 titulo='Producto Uno'
-                texto='Lorem ipsum dolor sit amet consectetur adipisicing elit'
+                texto='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
             />
 
             <Productos 
