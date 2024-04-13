@@ -1,4 +1,5 @@
-import { Header } from '../Componentes/Header'
+import { Navbar } from '../Componentes/Navbar'
+import { Footer } from '../Componentes/Footer'
 import { MainArticle } from '../Componentes/MainArticle'
 import { ContenedorArticulos } from '../Componentes/ContenedorArticulos'
 import { ContenedorProductos } from '../Componentes/ContenedorProdcutos' 
@@ -6,8 +7,10 @@ import { ContenedorProductos } from '../Componentes/ContenedorProdcutos'
 export function Home(){
 
     return (
-        <>
-            <Header />
+        <>  
+            <header>
+                <Navbar />
+            </header>
 
             <section className='pt-6 lg:flex lg:gap-8'>
 
@@ -19,6 +22,10 @@ export function Home(){
 
 
             <ContenedorProductos />
+
+            <footer>
+                <Footer />
+            </footer>
 
         </>
     )

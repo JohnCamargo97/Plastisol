@@ -1,11 +1,11 @@
-import { Header } from '../Componentes/Header'
+import { Navbar } from "../Componentes/Navbar"
 
 export function Perfil(){
 
     return (
         <div>
-            Pagina Perfil
-            <Header />
+            <Navbar />
         </div>
     )
 }
+
