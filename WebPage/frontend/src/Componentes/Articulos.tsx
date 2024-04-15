@@ -6,5 +6,5 @@ export function Articulos({titulo, texto}){
             <h2 className="text-white font-bold text-[18px] mb-2">{titulo}</h2>
             <p className="text-[16px]">{texto}</p>
         </article>
-    )
+    );
 }

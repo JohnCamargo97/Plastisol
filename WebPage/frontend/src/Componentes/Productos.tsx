@@ -14,5 +14,5 @@ export function Productos({img, numero, titulo, texto}){
             </div>
         </article>
 
-    )
+    );
 }

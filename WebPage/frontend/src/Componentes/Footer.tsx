@@ -6,5 +6,5 @@ export function Footer(){
             <div>Pie de Pagina</div>
         </footer>
 
-    )
+    );
 }

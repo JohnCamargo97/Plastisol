@@ -27,5 +27,5 @@ export function MainArticle(){
 
         </section>
 
-    )
+    );
 }

@@ -21,5 +21,5 @@ export function ContenedorArticulos(){
                 texto='Sed nihil saepe et corporis magni laborum, labore delectus accusamus est debitis.'
             />
         </aside>
-    )
+    );
 }
