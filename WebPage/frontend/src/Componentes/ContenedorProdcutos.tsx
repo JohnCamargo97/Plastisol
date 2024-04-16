@@ -10,7 +10,7 @@ export function ContenedorProductos(){
 
         <>
         
-        <section className="mt-10 lg:flex sm:mt-20">
+        <section className="mt-10 lg:flex sm:mt-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
             <Productos 
                 img={imgCafeUno}
                 numero='01'
