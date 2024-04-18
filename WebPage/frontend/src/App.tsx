@@ -8,7 +8,7 @@ import './App.css'
 function App() {
   return (
 
-    <main className='px-8 pt-4'>
+    <main className='pt-4'>
     <BrowserRouter>
         <Routes>
           <Route path='/' element={< Navigate to='/Home' />} />
