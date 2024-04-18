@@ -1,16 +1,12 @@
 import cerrarMenu from '../Img/Icono-cruz.png';
 import menuBurger from '../Img/Icono-barras-escalonadas.png';
 import anguloAbajo from '../Img/Icono-angulo-hacia-abajo.png';
-import correo from '../Img/Icono-sobre.png';
+/*import correo from '../Img/Icono-sobre.png';*/
 import logo from '../Img/StarbucksLogo.png';
 import { useState } from 'react';
 
 export function Navbar() {
   
-  const Links = [
-    { nombre: 'Nosotros', link: '/' },
-  ];
-
   const Productos = [
     { nombre: 'Parafinado', link: '/Perfil' },
     { nombre: 'Plasticos', link: '/' },
@@ -61,21 +57,13 @@ return (
 
     </div>
 
-    <ul className={`md:flex md:items-center md:space-x-10  md:ml-auto mt-2 bg-white md:relative md:z-auto z-10 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${isOpen ? 'block' : 'hidden md:block'}`}>
-      {Links.map((link, index) => (
-        <li key={index} className='font-semibold my-2 md:my-0 md:ml-4'>
-          <a className='md:border-b-2 border-white transition ease-in duration-400 md:hover:border-solid md:hover:border-b-2 hover:border-black' href={link.link} onClick={closeMenus}>
-            {link.nombre}
-          </a>
-        </li>
-      ))}
-
+    <ul className={`md:flex md:items-center md:space-x-10  md:ml-auto mt-2 bg-white md:relative md:z-auto z-10 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in  ${isOpen ? 'block' : 'hidden md:block'}`}>
       <li className='font-semibold my-2 md:my-0 relative mt-4'>
-        <a className='flex items-center md:border-b-2 border-white transition ease-in duration-300 md:hover:border-solid md:hover:border-b-2 hover:border-black' href="/" onClick={(e) => {e.preventDefault(); toggleContacto();}}>Contactanos <img className='h-[25px] w-[25px] mt-1' src={anguloAbajo} alt="" /></a>
-        <ul className={`mt-2 ${isContactoOpen ? 'block' : 'hidden'} cursor-pointer md:absolute md:left-0 md:top-full md:w-[auto] md:h-[auto] md:bg-white md:shadow-md md:z-20 md:border md:border-gray-200 md:py-2`}>
+        <a className='flex items-center md:border-b-2 border-white transition ease-in duration-300 md:hover:border-solid md:hover:border-b-2 hover:border-slate-800' href="/" onClick={(e) => {e.preventDefault(); toggleContacto();}}>Contactanos <img className='h-[25px] w-[25px] mt-1' src={anguloAbajo} alt="" /></a>
+        <ul className={`mt-2 ${isContactoOpen ? 'block' : 'hidden'} cursor-pointer md:absolute md:left-0 md:top-full md:w-[auto] md:h-[auto] md:bg-white md:shadow-md md:z-20 md:border-solid md:border-2 rounded md:border-gray-300 md:py-2`}>
           {Contacto.map((contacto, index) => (
-            <li key={index} className='font-medium md:text-[14px] mb-2 mx-2 md:border-b-2 border-white transition ease-in duration-400 md:hover:border-solid md:hover:border-b-2 hover:border-black'>
-              <a href={contacto.link} onClick={closeMenus}>
+            <li key={index} className='hover:bg-slate-200 h-10 flex items-center'>
+              <a className='font-medium md:text-[16px] p-2' href={contacto.link} onClick={closeMenus}>
                 {contacto.nombre}
               </a>
             </li>
@@ -84,11 +72,11 @@ return (
       </li>
 
       <li className='font-semibold my-2 md:my-0 relative mt-4'>
-        <a className='flex items-center md:border-b-2 border-white transition ease-in duration-300 md:hover:border-solid md:hover:border-b-2 hover:border-black' href="/" onClick={(e) => {e.preventDefault(); toggleProductosMenu();}}>Productos <img className='h-[25px] w-[25px] mt-1' src={anguloAbajo} alt="" /></a>
-        <ul className={`mt-2 ${isProductosOpen ? 'block' : 'hidden'} cursor-pointer md:absolute md:left-0 md:top-full md:w-[120px] md:h-[auto] md:bg-white md:shadow-md md:z-20 md:border md:border-gray-200 md:py-2`}>
+        <a className='flex items-center md:border-b-2 border-white transition ease-in duration-300 md:hover:border-solid md:hover:border-b-2 hover:border-slate-800' href="/" onClick={(e) => {e.preventDefault(); toggleProductosMenu();}}>Productos <img className='h-[25px] w-[25px] mt-1' src={anguloAbajo} alt="" /></a>
+        <ul className={`mt-2 ${isProductosOpen ? 'block' : 'hidden'} cursor-pointer md:absolute md:left-0 md:top-full md:w-[120px] md:h-[auto] md:bg-white md:shadow-md md:z-20 md:border-solid md:border-2 rounded md:border-gray-300 md:py-2`}>
           {Productos.map((producto, index) => (
-            <li key={index} className='font-medium md:text-[14px] mb-2 mx-2 md:border-b-2 border-white transition ease-in duration-400 md:hover:border-solid md:hover:border-b-2 hover:border-black'>
-              <a href={producto.link} onClick={closeMenus}>
+            <li key={index} className='hover:bg-slate-200 h-10 flex items-center'>
+              <a className='font-medium md:text-[16px] p-2' href={producto.link} onClick={closeMenus}>
                 {producto.nombre}
               </a>
             </li>
@@ -96,11 +84,12 @@ return (
         </ul>
       </li>
 
-      <span className="h-1 bg-black bg-opacity-60 w-full sm:hidden block"></span>
+      <div className='border-b border-slate-800 md:hidden'></div>
         
-      <li className='font-semibold my-2 md:my-0 mt-4'>
-        <a className='bg-blue-500 py-2 px-8 text-white  hover:animate-pulse ' href="/">Cotización</a>
+      <li className='font-semibold my-4 md:my-0'>
+        <a className='bg-blue-500 py-2 px-8 text-white hover:animate-pulse ' href="/">Cotización</a>
       </li>
+
     </ul>
 
   </nav>
