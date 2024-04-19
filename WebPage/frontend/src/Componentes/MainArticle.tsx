@@ -22,7 +22,7 @@ export function MainArticle(){
 
     return (
         
-        <section className='relative pt-6'>
+        <section className='relative pt-2'>
 
                 <picture className='w-full'>
                     <source media='(max-width: 640px)' srcSet={imagenes[currentImageIndex]} />
@@ -32,7 +32,7 @@ export function MainArticle(){
                         
                         <div className='h-[auto] text-white font-bold '>
                             <div className='bg-black h-full md:p-10 p-5'>
-                                <div className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl p-5'>
+                                <div className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:p-5'>
                                     <h2 className='text-[40px] sm:text-[50px] leading-none'>¿Por qué trabajar con nosotros?</h2>
                                     <p className='text-[15px] mt-5 sm:text-[18px]'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum voluptates sapiente nam id sequi quas at, saepe modi similique fugiat minus aspernatur omnis dolorem assumenda debitis quo nesciunt culpa voluptatum.</p>
                                     <ul className='mt-5'>
@@ -40,7 +40,7 @@ export function MainArticle(){
                                         <li>Text2</li>
                                         <li>Text3</li>
                                         <li>Text4</li>
-                                </ul>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

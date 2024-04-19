@@ -10,25 +10,25 @@ export function ContenedorProductos(){
 
         <>
         
-        <section className="mt-10 px-5 lg:flex sm:mt-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+        <section className=" my-20 lg:flex md:mt-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
             <Productos 
                 img={imgCafeUno}
-                numero='01'
-                titulo='Producto Uno'
-                texto='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                titulo='Nombre Prodcuto'
+                precio='$50.00'
+                texto='ut sed rerum nesciunt inventore maxime ducimus nihil expedita aliquid. Dolorem, animi.'
             />
 
             <Productos 
                 img={imgCafeDos}
-                numero='02'
-                titulo='Producto Dos'
+                titulo='Nombre Prodcuto'
+                precio='$75.00'
                 texto='ut sed rerum nesciunt inventore maxime ducimus nihil expedita aliquid. Dolorem, animi.'
             />
 
             <Productos
                 img={imgCafeTres}
-                numero='03'
-                titulo='Producto Tres'
+                titulo='Nombre Prodcuto'
+                precio='$100'
                 texto='Dolor ut illum dicta repudiandae sed deleniti dolorum minima rerum neque, ipsam sequi autem.'
             />
 
