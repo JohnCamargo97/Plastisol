@@ -1,4 +1,5 @@
 from rest_framework import generics, permissions, authentication
+from django_filters.rest_framework import DjangoFilterBackend
 from .models import product
 from product_manager.API.serializers import ProductSerializer 
 from .authentication import TokenAuthentication
@@ -15,11 +16,9 @@ from .authentication import TokenAuthentication
 class ProductListCreateAPIView(generics.ListCreateAPIView):
     queryset = product.objects.all()
     serializer_class = ProductSerializer
-    authentication_classes = [
-        authentication.SessionAuthentication, 
-        TokenAuthentication
-    ]
-    permission_classes = [permissions.IsAuthenticated]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['category', 'product_id']
+
 
 class ProducDetailAPIView(generics.RetrieveAPIView):
     queryset = product.objects.all()
