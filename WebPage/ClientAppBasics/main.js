@@ -10,7 +10,8 @@ let get_data = () => {
 }
 
 let post_data = (product) => {
-    let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyNzg4NjQ1LCJpYXQiOjE3MTI3ODgzNDUsImp0aSI6IjI0MDI2MWMzYmNmNjQ5ZmY5YzkyNmNjYmNkYTlhMDRmIiwidXNlcl9pZCI6MX0.YQIZIFoy_US22pKGgHJ7Xk8fZFLGx8nEslto_KNoeJo'
+    let token = localStorage.getItem('token')
+    console.log(`Bearer ${token}`)
     fetch(URL, {
         method:'POST', 
         headers: {
@@ -21,13 +22,14 @@ let post_data = (product) => {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('success:', data)
-    })
+        console.log('success response:', data)
+        get_data()})
+    .catch(error => console.log(error))
 }
 
 let build_data = (data) => {
     let data_wrapper = document.getElementById('data-wrapper')
-    
+    data_wrapper.innerHTML = ''
     for (let i = 0; data.length > i; i++){
         let data_ = data[i]
         
@@ -42,7 +44,7 @@ let build_data = (data) => {
         data_wrapper.innerHTML += data_card
     }
 
-    //add an listener
+    //add a listener
     add_product()
 
 }
@@ -56,8 +58,7 @@ let add_product = () => {
 
 get_data()
 
-const form = document.querySelector("#product-form");
-
+const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     sendData();
@@ -65,5 +66,6 @@ form.addEventListener("submit", (event) => {
 
 async function sendData(){
     const formData = new FormData(form);
-    console.log("formData", formData)
+    const data = Object.fromEntries(formData); //convert to normal js object
+    post_data(data)
 }
