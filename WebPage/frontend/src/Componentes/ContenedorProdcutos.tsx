@@ -14,21 +14,18 @@ export function ContenedorProductos(){
             <Productos 
                 img={imgCafeUno}
                 titulo='Nombre Prodcuto'
-                precio='$50.00'
                 texto='ut sed rerum nesciunt inventore maxime ducimus nihil expedita aliquid. Dolorem, animi.'
             />
 
             <Productos 
                 img={imgCafeDos}
                 titulo='Nombre Prodcuto'
-                precio='$75.00'
                 texto='ut sed rerum nesciunt inventore maxime ducimus nihil expedita aliquid. Dolorem, animi.'
             />
 
             <Productos
                 img={imgCafeTres}
                 titulo='Nombre Prodcuto'
-                precio='$100'
                 texto='Dolor ut illum dicta repudiandae sed deleniti dolorum minima rerum neque, ipsam sequi autem.'
             />
 

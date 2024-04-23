@@ -2,89 +2,55 @@ import ubicacion from '../Img/UbicacionPlastisol.png';
 
 export function Footer() {
   return (
-    <div className='relative mt-16 bg-green-600'>
-      <div className='px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+    <footer className="bg-gray-800 text-white pt-10 pb-4">
 
-        {/* Contenedor flex para el footer */}
-        <div className='grid gap-16 row-gap-10 mb-8 lg:flex lg:justify-end'>
+      <div className="container mx-auto p-5">
+        <div className="md:flex justify-between">
 
-          <div className='md:max-w-md lg:col-span-2 lg:col-start-1'>
-
-            <span className='text-xl font-bold tracking-wide text-white uppercase'>
-              Plastisol
-            </span>
-
-            <div className='mt-4 lg:max-w-sm'>
-              <p className='text-sm'>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
-              </p>
-              <p className='mt-4 text-sm'>
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
-              </p>
-            </div>
+          {/* Sección de Plastisol */}
+          <div className="w-full mb-8">
+            <h3 className="text-lg mb-4 font-semibold">Plastisol</h3>
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam alias, dicta eius quas nemo soluta consequatur sapiente, reiciendis iste excepturi! Dicta tenetur quisquam quibusdam voluptatum autem. Provident, cumque doloremque?</span>
           </div>
 
-          <div className=''>
-            <div>
-              <p className='font-semibold tracking-wide text-teal-accent-400 text-white'>
-                Contactanos
-              </p>
+          <div className='w-full md:flex md:mx-12'>
 
-              <ul className='mt-2 space-y-2'>
-                <li>
-                  <a href="/">+57 3202238383</a>
-                </li>
-                <li>
-                  <a href="/">ejemplo@gmail.com</a>
-                </li>
-                <li>
-                  <a href="/">Cra 25A Sur MZ D CS7</a>
-                </li>
-              </ul>
-
+            {/* Sección de información */}
+            <div className="w-full mb-8">
+              <h3 className="text-lg mb-4 font-semibold">Proveedores</h3>
+              <p className="mb-2">Plastisol S.A.S</p>
+              <p className="mb-2">Plastisol S.A.S</p>
+              <p className="mb-2">Plastisol S.A.S</p>
+              <p className="mb-2">Plastisol S.A.S</p>
             </div>
+
+            {/* Sección de información */}
+            <div className="w-full mb-8">
+              <h3 className="text-lg mb-4 font-semibold">Información</h3>
+              <p className="mb-2">Dirección: Cra 26 # 37-10</p>
+              <p className="mb-2">Teléfono: +57 3184278532</p>
+              <p>Email: info@misitioweb.com</p>
+            </div>
+
           </div>
 
-          <div className=''>
-            <div>
-              <p className='font-semibold tracking-wide text-teal-accent-400 text-white'>
-                Proveedores
-              </p>
-
-              <ul className='mt-2 space-y-2'>
-                <li>
-                  <a href="/">Plasticos S.A.S</a>
-                </li>
-                <li>
-                  <a href="/">eCommerce</a>
-                </li>
-                <li>
-                  <a href="/">Alkosto</a>
-                </li>
-                <li>
-                  <a href="/">La Garza</a>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-
-          <div className='w-full h-[300px] md:w-[30%]'>
-            <img className='rounded w-full h-[100%] object-cover' src={ubicacion} alt="" />
+          {/* Sección de información */}
+          <div className="w-[50%] h-[200px] mb-20">
+            <h3 className="text-lg mb-4 font-semibold">Ubicación</h3>
+            <img className='w-full h-[100%] object-cover rounded-[15px]' src={ubicacion} alt="" />
           </div>
 
         </div>
-
-        {/* Copyright siempre abajo */}
-        <div className='pt-5 pb-10 border-t border-white'>
-          <p className='text-sm text-white text-center lg:text-right'>
-            © Copyright 2024 Plastisol.
-          </p>
+        {/* Derechos de autor */}
+        <div className="mt-8 text-center">
+          <p>&copy; 2024 Plastisol. Todos los derechos reservados.</p>
         </div>
-
       </div>
-    </div>
+
+    </footer>
   );
-}
+};
+
+export default Footer;
+
+
