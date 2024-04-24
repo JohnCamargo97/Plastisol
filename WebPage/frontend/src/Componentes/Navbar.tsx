@@ -87,7 +87,7 @@ return (
       <div className='border-b border-slate-800 md:hidden'></div>
         
       <li className='font-semibold my-4 md:my-0'>
-        <a className='bg-blue-500 py-2 px-8 text-white hover:animate-pulse ' href="/">Cotización</a>
+        <a className='bg-blue-700 py-2 px-8 text-white hover:animate-pulse ' href="/">Cotización</a>
       </li>
 
     </ul>

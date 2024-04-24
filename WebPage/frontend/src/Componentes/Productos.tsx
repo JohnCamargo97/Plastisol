@@ -3,7 +3,7 @@ export function Productos({img, titulo, texto}){
     return (
         <article className='flex justify-center h-full sm:w-full'> {/* Añade justify-center aquí */}
 
-            <div className='w-[325px] h-full bg-slate-100 rounded-[15px] shadow-2xl mb-10'>
+            <div className='w-[325px] lg:w-[285px] md:w-[60%] h-full bg-slate-300 rounded-[15px] shadow-2xl mb-10'>
 
                 <div className='w-[full] h-[300px] relative mx-5 my-5'>
                     <img className='absolute inset-0 w-full h-full object-cover rounded-[15px]' src={img} alt="" />
@@ -22,3 +22,4 @@ export function Productos({img, titulo, texto}){
     );
 }
 
+export default Productos; 
