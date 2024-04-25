@@ -1,7 +1,7 @@
 import { Navbar } from '../Componentes/Navbar'
 import { Footer } from '../Componentes/Footer'
 import { MainArticle } from '../Componentes/MainArticle'
-import { ContenedorProductos } from '../Componentes/ContenedorProdcutos' 
+import { ContenedorCartas } from '../Componentes/ContenedorCartas' 
 
 export function Home(){
 
@@ -11,9 +11,13 @@ export function Home(){
                 <Navbar />
             </header>
 
-            <MainArticle />
+            <section>
+                <MainArticle />
+            </section>
 
-            <ContenedorProductos />
+            <section>
+                <ContenedorCartas />
+            </section>
 
             <footer>
                 <Footer />
@@ -22,3 +26,5 @@ export function Home(){
         </>
     )
 }
+
+export default Home;

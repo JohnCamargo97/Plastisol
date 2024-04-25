@@ -51,3 +51,5 @@ export function MainArticle(){
         </section>
     );
 }
+
+export default MainArticle;

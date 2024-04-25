@@ -1,4 +1,4 @@
-export function Productos({img, titulo, texto}){
+export function CartasProductos({img, titulo, texto}){
 
     return (
         <article className='flex justify-center h-full sm:w-full'> {/* Añade justify-center aquí */}
@@ -22,4 +22,4 @@ export function Productos({img, titulo, texto}){
     );
 }
 
-export default Productos; 
+export default CartasProductos; 

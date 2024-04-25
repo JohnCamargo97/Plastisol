@@ -3,9 +3,9 @@ import ubicacion from '../Img/UbicacionPlastisol.png';
 export function Footer() {
   return (
     
-    <footer className="bg-blue-700 text-white py-8">
+    <footer className='bg-blue-700 text-white py-8'>
 
-      <div className="container mx-auto md:p-10 p-0 md:flex md:justify-between md:text-left  text-center">
+      <div className='container mx-auto md:p-10 p-0 md:flex md:justify-between md:text-left  text-center'>
 
         <div className='md:w-[250px] xl:w-[300px]  md:mr-5 mb-10 p-5 md:p-0'>
           <h3 className='mb-4 font-bold text-lg'>Plastisol</h3>
@@ -42,7 +42,7 @@ export function Footer() {
       </div>
 
       {/* Derechos de autor */}
-      <div className="mt-8 text-center">
+      <div className='mt-8 text-center'>
         <p>&copy; 2024 Plastisol. Todos los derechos reservados.</p>
       </div>
 
