@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'product_manager',
     'corsheaders',
     'django_filters',
+    'algoliasearch_django'
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -154,3 +155,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ALGOLIA = {
+    'APPLICATION_ID': 'TC29LKPW6G',
+    'API_KEY': 'd077c398574cdbf37f5dbaf3710e5700',
+    'INDEX_PREFIX': 'Plastisol'
+}

@@ -12,12 +12,11 @@ from .authentication import TokenAuthentication
 #    queryset = product.objects.all()
 #    serializer_class = ProductSerializer
 
-
 class ProductListCreateAPIView(generics.ListCreateAPIView):
     queryset = product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['category', 'product_id']
+    filterset_fields = ['product_id']#,'category']
 
 
 class ProducDetailAPIView(generics.RetrieveAPIView):
