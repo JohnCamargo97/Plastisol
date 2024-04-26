@@ -6,7 +6,7 @@ export function Filtros(){
             <div className='border-t-[1px] border-black flex justify-between items-center h-[100px]'>
 
                 <div className='px-14 py-5'>
-                    <select className='w-[180px] h-[50px] cursor-pointer border border-black' name="Filtro" id="">
+                    <select className='w-[180px] h-[50px] rounded cursor-pointer border-2 border-black' name="Filtro" id="">
                         <option value="" disabled selected hidden>Filtro</option>
                         <option value="1">Parafinados</option>
                         <option value="2">PVC</option>
@@ -15,7 +15,7 @@ export function Filtros(){
                 </div>
 
                 <div className='px-14 py-5'>
-                    <input className="w-[180px] h-[50px] cursor-pointer border border-black p-4" type="text" placeholder="Buscar"/>
+                    <input className="w-[180px] h-[50px] cursor-pointer rounded border-2 border-black p-4" type="text" placeholder="Buscar"/>
                 </div>
 
             </div>

@@ -1,7 +1,6 @@
 import { Navbar } from '../Componentes/Navbar';
 import { Filtros } from '../Componentes/Filtros';
-import { LosProductos } from '../Componentes/LosProductos'
-
+import { LosProductos } from '../Componentes/LosProductos';
 export function Productos(){
 
     return (
