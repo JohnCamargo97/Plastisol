@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Home } from './Paginas/Home';
-import { Perfil } from './Paginas/Perfil';
-import { Header } from './Componentes/Header';
+import { Productos } from './Paginas/Productos';
 
 import './App.css'
 
@@ -9,13 +8,12 @@ import './App.css'
 function App() {
   return (
 
-    <main className='px-8 pt-4'>
+    <main className='pt-4'>
     <BrowserRouter>
         <Routes>
           <Route path='/' element={< Navigate to='/Home' />} />
           <Route path='/home' element={<Home />} />
-          <Route path='/perfil' element={<Perfil />} />
-          <Route path='/navbar' element={<Header />} />
+          <Route path='/productos' element={<Productos />} />
         </Routes>
       </BrowserRouter>
     </main>
