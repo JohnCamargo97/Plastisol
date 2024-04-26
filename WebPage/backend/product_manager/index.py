@@ -6,7 +6,8 @@ from .models import product
 @register(product)
 class ProductIndex(AlgoliaIndex):
     fields = [
-        #'category',
+        
         'product_id',
         'description'
     ]
+    tags = 'get_category_tags'
