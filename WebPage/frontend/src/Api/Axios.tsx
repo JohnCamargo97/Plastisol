@@ -6,7 +6,7 @@ const Axios = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/product/").then((response) => {
+      .get("http://127.0.0.1:8000/API/product/").then((response) => {
         setData(response.data);
       })
 
