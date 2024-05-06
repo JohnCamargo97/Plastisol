@@ -1,6 +1,7 @@
 import cerrarMenu from '../Img/Icono-cruz.png';
 import menuBurger from '../Img/Icono-barras-escalonadas.png';
 import anguloAbajo from '../Img/Icono-angulo-hacia-abajo.png';
+
 /*import correo from '../Img/Icono-sobre.png';*/
 import logo from '../Img/StarbucksLogo.png';
 import { useState } from 'react';
@@ -86,9 +87,11 @@ export function Navbar() {
 
         <div className="border-b border-slate-800 md:hidden"></div>
           
-        <li className="font-semibold my-4 md:my-0">
-          <a className="bg-blue-700 py-2 px-8 text-white hover:animate-pulse" href="/">Cotización</a>
-        </li>
+        <div className="font-semibold my-4 md:my-0 border border-black items-start">
+          <div className=" mb-2.5 mr-1 ">
+            <a className="bg-slate-950 hover:bg-slate-900 text-white py-2 px-10 -ml-2" href="/">Cotización</a>
+          </div>
+        </div>
 
       </ul>
 

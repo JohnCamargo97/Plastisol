@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { buscarProductos } from '../Api/ApiFiltro';
 
+import buscar from '../Img/IconoBusqueda.png';
+
 function BarraBusqueda({ onSearchResults, onClearSearch }) {
     const [query, setQuery] = useState('');
     const [productos, setProductos] = useState([]);
@@ -34,14 +36,17 @@ function BarraBusqueda({ onSearchResults, onClearSearch }) {
         <section className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-5 mt-5'>
             <div className='border-t-[1px] border-black flex justify-between items-center h-[100px]'>
                 <div className='px-14 py-5'>
-                    <input
-                        className="w-[180px] h-[50px] cursor-pointer rounded border-2 border-black p-4"
-                        type="text"
-                        placeholder="Buscar"
-                        value={query}
-                        onChange={handleInputChange}
-                        onKeyUp={handleKeyUp}
-                    />
+                    <div className='bg-white w-full flex items-center cursor-pointer rounded border-2 border-black'>
+                        <input
+                            className="w-[100px] h-[50px] outline-none border-none p-4"
+                            type="text"
+                            placeholder="Buscar"
+                            value={query}
+                            onChange={handleInputChange}
+                            onKeyUp={handleKeyUp}
+                        />
+                        <img className='w-[20px] h-[20px] mr-2' src={buscar} alt="" />
+                    </div>
                 </div>
             </div>
         </section>

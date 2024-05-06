@@ -3,7 +3,7 @@ import ubicacion from '../Img/UbicacionPlastisol.png';
 export function Footer() {
   return (
     
-    <footer className="bg-blue-700 text-white py-8">
+    <footer className="bg-slate-950 text-white py-8">
 
       <div className="container mx-auto md:p-10 p-0 md:flex md:justify-between md:text-left  text-center">
 

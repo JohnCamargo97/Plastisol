@@ -2,10 +2,16 @@ import { useState, useEffect } from "react";
 import Filtros from '../Componentes/Filtros'
 import axios from "axios";
 import Footer from "./Footer";
+import '../styles/plastisol.css'
 
 import imgCafeUno from '../Img/CafeUno.jpg';
 import imgCafeDos from '../Img/CafeDos.jpg';
 import imgCafeTres from '../Img/CafeTres.jpg';
+import flechaIzq from '../Img/Icono-izquierda-black.png';
+import flechaDer from '../Img/Icono-derecha-black.png';
+
+
+
 
     const LosProductos = () => {
     const [products, setProducts] = useState([]);
@@ -87,17 +93,19 @@ import imgCafeTres from '../Img/CafeTres.jpg';
 
                 <div className="w-[25%] flex justify-between">
                     <button
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        className= "botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 border border-black rounded flex items-center justify-center"
                         onClick={handlePrevPage}
                         disabled={!prevPage}>
+                        <img className="w-[20px] h-[20px] mr-3" src={flechaIzq} alt="" />
                         Anterior
                     </button>
                     
                     <button
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        className="botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 border border-black rounded flex items-center"
                         onClick={handleNextPage}
                         disabled={!nextPage}>
                         Siguiente
+                        <img className="w-[20px] h-[20px] ml-3" src={flechaDer} alt="" />
                     </button>
                 </div>
                 
