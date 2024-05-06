@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
+import Filtros from '../Componentes/Filtros'
 import axios from "axios";
-
 import Footer from "./Footer";
 
 import imgCafeUno from '../Img/CafeUno.jpg';
@@ -27,6 +27,10 @@ import imgCafeTres from '../Img/CafeTres.jpg';
         }
     };
 
+    const handleSearchResults = (results) => {
+        setProducts(results);
+    };
+
     const handleNextPage = () => {
         fetchProducts(nextPage);
     };
@@ -47,6 +51,12 @@ import imgCafeTres from '../Img/CafeTres.jpg';
     return (
 
         <>
+
+        {/* Barra de búsqueda */}
+        <Filtros
+        onSearchResults={handleSearchResults}
+        onClearSearch={() => fetchProducts("http://127.0.0.1:8000/API/products/")}
+        />
 
         <section>
 
