@@ -1,51 +1,121 @@
-import imgCafeUno from '../Img/CafeUno.jpg'
-import imgCafeDos from '../Img/CafeDos.jpg'
-import imgCafeTres from '../Img/CafeTres.jpg'
+import { useState, useEffect } from "react";
+import Filtros from '../Componentes/Filtros'
+import axios from "axios";
+import Footer from "./Footer";
+import '../styles/plastisol.css'
 
-import { useEffect, useState,  } from 'react';
-import { ListaProductos } from "./ListaProductos";
-import { DatosProductos } from '../Api/DatosDelProducto';
+import imgCafeUno from '../Img/CafeUno.jpg';
+import imgCafeDos from '../Img/CafeDos.jpg';
+import imgCafeTres from '../Img/CafeTres.jpg';
+import flechaIzq from '../Img/Icono-izquierda-black.png';
+import flechaDer from '../Img/Icono-derecha-black.png';
 
-export function LosProductos(){
 
-    const [datos, setDatos] = useState([]);
+
+    const LosProductos = () => {
+    const [products, setProducts] = useState([]);
+    const [nextPage, setNextPage] = useState("");
+    const [prevPage, setPrevPage] = useState("");
 
     useEffect(() => {
-        async function CargarDatos(){
-            const res = await DatosProductos();
-            setDatos(res.data);
-
-        }
-        CargarDatos();
-
+        fetchProducts("http://127.0.0.1:8000/API/products/");
     }, []);
+
+    const fetchProducts = async (url) => {
+        try {
+        const response = await axios.get(url);
+        setProducts(response.data.results);
+        setNextPage(response.data.next);
+        setPrevPage(response.data.previous);
+        } catch (error) {
+        console.error("Error fetching products:", error);
+        }
+    };
+
+    const handleSearchResults = (results) => {
+        setProducts(results);
+    };
+
+    const handleNextPage = () => {
+        fetchProducts(nextPage);
+    };
+
+    const handlePrevPage = () => {
+        fetchProducts(prevPage);
+    };
     
+
     const imagenesProductos = {
-        1: imgCafeUno,
-        2: imgCafeDos,
-        3: imgCafeTres,
+        "00101": imgCafeUno,
+        "00102": imgCafeDos,
+        "00103": imgCafeTres,
         // Añade más imágenes según sea necesario
     };
+
 
     return (
 
         <>
-
-        <section className='my-20 lg:flex md:mt-20 lg:mt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
-
-            {datos.map(dato => (
-                <ListaProductos
-                key={dato.id}
-                dato={dato} 
-                img={imagenesProductos[dato.id]}/>
-                
-            ))}
-
-        </section>
         
+        {/* Barra de búsqueda */}
+        <Filtros
+        onSearchResults={handleSearchResults}
+        onClearSearch={() => fetchProducts("http://127.0.0.1:8000/API/products/")}
+        />
+
+        <div className="lg:flex lg:justify-center lg:mt-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-0.5 md:w-[100%] lg:w-[90%]">
+                {products.map((product) => (
+                    <li className="list-none" key={product.product_id}>
+                        <div className="flex justify-center h-full sm:w-full">
+                            <div className="transition-all duration-800 ease-in-out w-[325px] lg:w-[290px] md:w-[60%] h-[auto] cursor-pointer border border-white hover:border-solid hover:border hover:border-black">
+                                <div className="w-[full] h-[250px] relative">
+                                    <img className="absolute inset-0 w-full h-full object-cover" src={imagenesProductos[product.product_id]} alt="" />
+                                </div>
+                                <div className="w-[auto] h-[auto] mt-2 p-2">
+                                    <p className="text-[18px] w-[100%] h-[100%] mb-5">{product.description}</p>
+                                    <p className="text-[18px] w-[100%] h-[100%] mb-5">{product.unit_price}</p>
+                                    <p className="text-[18px] w-[100%] h-[100%] mb-5">{product.amount}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                ))}
+            </div>
+
+        </div>
+
+        <div className="my-10 lg:flex lg:justify-center mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+
+            <div className="w-[full] flex md:justify-between md:w-[25%] justify-center">
+                <button
+                    className= "botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 border border-black rounded flex items-center transition-all duration-700 ease-in-out"
+                    onClick={handlePrevPage}
+                    disabled={!prevPage}>
+                    <img className="w-[20px] h-[20px] mr-3" src={flechaIzq} alt="" />
+                    Anterior
+                </button>
+                
+                <button
+                    className="botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 border border-black rounded flex items-center transition-all duration-700 ease-in-out"
+                    onClick={handleNextPage}
+                    disabled={!nextPage}>
+                    Siguiente
+                    <img className="w-[20px] h-[20px] ml-3" src={flechaDer} alt="" />
+                </button>
+            </div>
+            
+        </div>
+
+
+        <footer>
+            <Footer/>
+        </footer>
+
         </>
 
     );
-}
+};
 
-export default LosProductos; 
+export default LosProductos;

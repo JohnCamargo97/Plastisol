@@ -10,7 +10,7 @@ export function ContenedorCartas(){
 
         <>
         
-        <section className='my-20 lg:flex md:mt-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
+        <section className="my-20 lg:flex md:mt-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
             <CartasProductos 
                 img={imgCafeUno}
                 titulo='Nombre Prodcuto'

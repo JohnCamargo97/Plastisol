@@ -1,27 +1,62 @@
-export function Filtros(){
+import { useState } from 'react';
+import { buscarProductos } from '../Api/ApiFiltro';
+
+import buscar from '../Img/IconoBusqueda.png';
+
+function BarraBusqueda({ onSearchResults, onClearSearch }) {
+    const [query, setQuery] = useState('');
+    const [productos, setProductos] = useState([]);
+
+    const handleInputChange = async (event) => {
+        const inputValue = event.target.value;
+        setQuery(inputValue);
+
+        if (inputValue.trim() !== '') {
+            const results = await buscarProductos(inputValue, 'parafinado');
+            setProductos(results);
+            // Pasar los resultados a LosProductos
+            onSearchResults(results);
+        } else {
+            setProductos([]);
+            // Pasar un array vacío a LosProductos para borrar los resultados de la búsqueda
+            onSearchResults([]);
+        }
+    };
+
+    const handleKeyUp = (event) => {
+        if (event.key === 'Backspace' && query === '') {
+            // Si la tecla presionada es Backspace y el campo de búsqueda está vacío
+            // llamar a la función para borrar la búsqueda en LosProductos
+            onClearSearch();
+        }
+    };
 
     return (
-        <section className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-5 mt-5'>
-
-            <div className='border-t-[1px] border-black flex justify-between items-center h-[100px]'>
-
-                <div className='px-14 py-5'>
-                    <select className='w-[180px] h-[50px] rounded cursor-pointer border-2 border-black' name="Filtro" id="">
-                        <option value="" disabled selected hidden>Filtro</option>
-                        <option value="1">Parafinados</option>
-                        <option value="2">PVC</option>
-                        <option value="3">Plástico PP</option>
-                    </select>
+        
+        <section className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-6 mt-5 mb-5'>
+            <div className='border-t-[1px] border-black flex justify-center lg:justify-start items-center h-[100px] w-[100%]'>
+                <div className='lg:py-5'>
+                    <div className='bg-white w-full flex justify-between items-center cursor-pointer rounded border-2 border-black'>
+                        <input
+                            className="w-[300px] md:w-[50%] h-[50px] outline-none border-none p-4"
+                            type="text"
+                            placeholder="Buscar"
+                            value={query}
+                            onChange={handleInputChange}
+                            onKeyUp={handleKeyUp}
+                        />
+                        <img className='w-[20px] h-[20px] mr-2' src={buscar} alt="" />
+                    </div>
                 </div>
-
-                <div className='px-14 py-5'>
-                    <input className="w-[180px] h-[50px] cursor-pointer rounded border-2 border-black p-4" type="text" placeholder="Buscar"/>
-                </div>
-
             </div>
-            
         </section>
+
     );
 }
 
-export default Filtros;
+export default BarraBusqueda;
+
+
+
+
+

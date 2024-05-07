@@ -1,0 +1,3 @@
+.botones-siguiente:hover img {
+    filter: invert(1); /* Invertir el color del icono en el hover */
+}
