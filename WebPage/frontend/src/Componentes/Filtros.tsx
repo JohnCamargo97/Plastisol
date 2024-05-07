@@ -33,12 +33,12 @@ function BarraBusqueda({ onSearchResults, onClearSearch }) {
 
     return (
         
-        <section className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-5 mt-5'>
-            <div className='border-t-[1px] border-black flex justify-between items-center h-[100px]'>
-                <div className='px-14 py-5'>
-                    <div className='bg-white w-full flex items-center cursor-pointer rounded border-2 border-black'>
+        <section className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-6 mt-5 mb-5'>
+            <div className='border-t-[1px] border-black flex justify-center lg:justify-start items-center h-[100px] w-[100%]'>
+                <div className='lg:py-5'>
+                    <div className='bg-white w-full flex justify-between items-center cursor-pointer rounded border-2 border-black'>
                         <input
-                            className="w-[100px] h-[50px] outline-none border-none p-4"
+                            className="w-[300px] md:w-[50%] h-[50px] outline-none border-none p-4"
                             type="text"
                             placeholder="Buscar"
                             value={query}

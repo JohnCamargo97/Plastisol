@@ -17,7 +17,7 @@ export function Navbar() {
 
   const Contacto = [
     { nombre: 'ejemplo@gmail.com', link: '/Home' },
-    { nombre: '3202345678', link: '/Home' },
+    { nombre: '+57 3202345678', link: '/Home' },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +64,7 @@ export function Navbar() {
           <a className="flex items-center md:border-b-2 border-white transition ease-in duration-300 md:hover:border-solid md:hover:border-b-2 hover:border-slate-800" href="/" onClick={(e) => {e.preventDefault(); toggleContacto();}}>Contactanos <img className="h-[25px] w-[25px] mt-1" src={anguloAbajo} alt="" /></a>
           <ul className={`mt-2 ${isContactoOpen ? 'block' : 'hidden'} cursor-pointer md:absolute md:left-0 md:top-full md:w-[auto] md:h-[auto] md:bg-white md:shadow-md md:z-20 md:border-solid md:border-2 md:border-gray-900 md:py-2`}>
             {Contacto.map((contacto, index) => (
-              <li key={index} className="hover:bg-slate-200 h-10 flex items-center">
+              <li key={index} className="hover:bg-slate-950 hover:text-white h-10 flex items-center">
                 <a className="font-medium md:text-[16px] p-2" href={contacto.link} onClick={closeMenus}>
                   {contacto.nombre}
                 </a>
@@ -77,7 +77,7 @@ export function Navbar() {
           <a className="flex items-center md:border-b-2 border-white transition ease-in duration-300 md:hover:border-solid md:hover:border-b-2 hover:border-slate-800" href="/" onClick={(e) => {e.preventDefault(); toggleProductosMenu();}}>Productos <img className="h-[25px] w-[25px] mt-1" src={anguloAbajo} alt="" /></a>
           <ul className={`mt-2 ${isProductosOpen ? 'block' : 'hidden'} cursor-pointer md:absolute md:left-0 md:top-full md:w-[120px] md:h-[auto] md:bg-white md:shadow-md md:z-20 md:border-solid md:border-2 md:border-gray-900 md:py-2`}>
             {Productos.map((producto, index) => (
-              <li key={index} className="hover:bg-slate-200 h-10 flex items-center">
+              <li key={index} className="hover:bg-slate-950 hover:text-white h-10 flex items-center">
                 <a className="font-medium md:text-[16px] p-2" href={producto.link} onClick={closeMenus}>
                   {producto.nombre}
                 </a>
@@ -86,9 +86,9 @@ export function Navbar() {
           </ul>
         </li>
 
-        <div className="border-b border-slate-800 md:hidden"></div>
+
           
-        <div className="font-semibold my-4 md:my-0 border border-black items-start">
+        <div className="font-semibold my-4 md:my-0 border border-black items-start w-[50%] md:w-[40%] mt-6 md:mt-0">
           <div className=" mb-1 mr-1">
             <a className="bg-slate-950 hover:bg-slate-900 text-white py-2 px-8 -ml-2 -mt-2 flex items-center" href="/">
               <span>Cotización</span>
