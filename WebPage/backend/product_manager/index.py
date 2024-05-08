@@ -11,3 +11,7 @@ class ProductIndex(AlgoliaIndex):
         'description'
     ]
     tags = 'get_category_tags'
+    
+    settings = {
+        "hitsPerPage": 15
+    }
