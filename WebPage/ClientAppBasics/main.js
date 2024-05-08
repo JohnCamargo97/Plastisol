@@ -1,4 +1,4 @@
-let URL = 'http://127.0.0.1:8000/product/'
+let URL = 'http://127.0.0.1:8000/API/products/'
 
 let get_data = () => {
         fetch(URL)
@@ -8,6 +8,7 @@ let get_data = () => {
         build_data(data)
     })
 }
+
 
 let post_data = (product) => {
     let token = localStorage.getItem('token')
