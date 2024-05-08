@@ -48,7 +48,7 @@ export function Navbar() {
       <div className="flex items-center justify-between bg-white py-2">
 
         <div className='flex items-center space-x-4'>
-          <img className="w-16 h-16 cursor-pointer" src={logo} alt="Logo" />
+          <a href="/Home"><img className="w-16 h-16 cursor-pointer" src={logo} alt="Logo" /></a>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -90,7 +90,7 @@ export function Navbar() {
           
         <div className="font-semibold my-4 md:my-0 border border-black items-start w-[50%] md:w-[40%] mt-6 md:mt-0">
           <div className=" mb-1 mr-1">
-            <a className="bg-slate-950 hover:bg-slate-900 text-white py-2 px-8 -ml-2 -mt-2 flex items-center" href="/">
+            <a className="bg-slate-950 hover:bg-slate-900 text-white py-2 px-8 -ml-2 -mt-2 flex items-center" href="/Forms">
               <span>Cotización</span>
               <span className='ml-1'><img className='w-[25px] h-[25px]' src={siguiente} alt="" /></span>
             </a>

@@ -55,8 +55,3 @@ function BarraBusqueda({ onSearchResults, onClearSearch }) {
 }
 
 export default BarraBusqueda;
-
-
-
-
-
