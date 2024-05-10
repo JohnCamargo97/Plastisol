@@ -11,7 +11,7 @@ export function Productos(){
             <Navbar />
         </header>
 
-        <section className=''>
+        <section>
             <LosProductos/>
         </section>
 

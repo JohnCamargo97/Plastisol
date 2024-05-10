@@ -14,21 +14,21 @@ export function FormQuote(){
                     <div className="">
                         <div className="mb-4">
                             <h3 className="font-semibold mb-2 px-2">Nombre del cotizante</h3>
-                            <input className="w-[80%] py-2 px-2 border-2 rounded" type="text" placeholder="Nombre Completo" />
+                            <input className="w-[80%] py-2 px-2 border-2 rounded focus:outline-slate-950" type="text" placeholder="Nombre Completo" />
                         </div>
 
                         <div className="mb-4 h-auto">
                             <h3 className="font-semibold mb-2 px-2">Identificación del cotizante</h3>
-                            <input className="w-[50%] py-2 px-2 border-2 rounded" type="text" placeholder="CC" />
+                            <input className="w-[50%] py-2 px-2 border-2 rounded focus:outline-slate-950" type="text" placeholder="CC" />
                         </div>
 
-                        <div className="mb-4">
+                        <div className="mb-5">
                             <h3 className="font-semibold mb-2">Dirección de correo</h3>
-                            <input className="w-[80%] py-2 px-2 border-2 rounded" type="text" placeholder="Correo" />
+                            <input className="w-[80%] py-2 px-2 border-2 rounded focus:outline-slate-950" type="text" placeholder="Correo" />
                         </div>
 
                         <div className="mt-4 ">
-                            <button className="bg-slate-950 text-white px-[100px] py-2 font-semibold text-lg">Enviar</button>
+                            <button className="bg-slate-950 text-white px-[100px] py-2 font-semibold text-lg hover:bg-slate-900">Enviar</button>
                             <img src="" alt="" />
                         </div>
 

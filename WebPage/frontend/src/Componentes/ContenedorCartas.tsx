@@ -9,28 +9,40 @@ export function ContenedorCartas(){
     return (
 
         <>
-        
-        <section className="my-20 lg:flex md:mt-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
-            <CartasProductos 
-                img={imgCafeUno}
-                titulo='Nombre Prodcuto'
-                texto='ut sed rerum nesciunt inventore maxime ducimus nihil expedita aliquid. Dolorem, animi.'
-            />
+            <div className='px-14 mt-20 lg:flex mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
+                <h3 className='font-bold text-2xl'>Productos más buscados</h3>
+            </div>
 
-            <CartasProductos
-                img={imgCafeDos}
-                titulo='Nombre Prodcuto'
-                texto='ut sed rerum nesciunt inventore maxime ducimus nihil expedita aliquid. Dolorem, animi.'
-            />
+            <div className="mt-8 mb-40 lg:flex lg:justify-center mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 
-            <CartasProductos
-                img={imgCafeTres}
-                titulo='Nombre Prodcuto'
-                texto='Dolor ut illum dicta repudiandae sed deleniti dolorum minima rerum neque, ipsam sequi autem.'
-            />
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:w-[100%] lg:w-[90%]">
+                    <CartasProductos 
+                        img={imgCafeUno}
+                        titulo='Nombre Producto'
+                        texto='Ut sed rerum nesciunt inventore maxime ducimus nihil expedita aliquid. Dolorem, animi.'
+                    />
 
-        </section>
-        
+                    <CartasProductos
+                        img={imgCafeDos}
+                        titulo='Nombre Producto'
+                        texto='Ut sed rerum nesciunt inventore maxime ducimus nihil expedita aliquid. Dolorem, animi.'
+                    />
+
+                    <CartasProductos
+                        img={imgCafeTres}
+                        titulo='Nombre Producto'
+                        texto='Dolor ut illum dicta repudiandae sed deleniti dolorum minima rerum neque, ipsam sequi autem.'
+                    />
+
+                    <CartasProductos
+                        img={imgCafeTres}
+                        titulo='Nombre Producto'
+                        texto='Dolor ut illum dicta repudiandae sed deleniti dolorum minima rerum neque, ipsam sequi autem.'
+                    />
+                </div>
+                
+            </div>   
+
         </>
 
     );
