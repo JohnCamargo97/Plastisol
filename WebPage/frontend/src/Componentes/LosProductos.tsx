@@ -65,7 +65,7 @@ import flechaDer from '../Img/Icono-derecha-black.png';
 
         <div className="lg:flex lg:justify-center lg:mt-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-0.5 md:w-[100%] lg:w-[90%]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-0.5 md:w-[100%] lg:w-[90%]">
                 {products.map((product) => (
                     <li className="list-none" key={product.product_id}>
                         <div className="flex justify-center h-full sm:w-full">
@@ -88,22 +88,28 @@ import flechaDer from '../Img/Icono-derecha-black.png';
 
         <div className="my-10 lg:flex lg:justify-center mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 
-            <div className="w-[full] flex md:justify-between md:w-[25%] justify-center">
-                <button
-                    className= "botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 border border-black rounded flex items-center transition-all duration-700 ease-in-out"
-                    onClick={handlePrevPage}
-                    disabled={!prevPage}>
-                    <img className="w-[20px] h-[20px] mr-3" src={flechaIzq} alt="" />
-                    Anterior
-                </button>
-                
-                <button
-                    className="botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 border border-black rounded flex items-center transition-all duration-700 ease-in-out"
-                    onClick={handleNextPage}
-                    disabled={!nextPage}>
-                    Siguiente
-                    <img className="w-[20px] h-[20px] ml-3" src={flechaDer} alt="" />
-                </button>
+            <div className="flex justify-center w-[100%]">
+
+                <div className="w-[85%] sm:w-[50%] lg:w-[35%] flex justify-between">
+
+                    <button
+                        className= "botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 border border-black rounded flex items-center transition-all duration-700 ease-in-out"
+                        onClick={handlePrevPage}
+                        disabled={!prevPage}>
+                        <img className="w-[20px] h-[20px] mr-3" src={flechaIzq} alt="" />
+                        Anterior
+                    </button>
+                    
+                    <button
+                        className="botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 border border-black rounded flex items-center transition-all duration-700 ease-in-out"
+                        onClick={handleNextPage}
+                        disabled={!nextPage}>
+                        Siguiente
+                        <img className="w-[20px] h-[20px] ml-3" src={flechaDer} alt="" />
+                    </button>
+
+                </div>
+
             </div>
             
         </div>

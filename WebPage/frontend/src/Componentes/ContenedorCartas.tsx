@@ -9,11 +9,13 @@ export function ContenedorCartas(){
     return (
 
         <>
-            <div className='px-14 mt-20 lg:flex mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
-                <h3 className='font-bold text-2xl'>Productos más buscados</h3>
+            <div className=' md:p-10 p-5'>
+                <div className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg-px-5 md:py-0 flex justify-center lg:justify-start'>
+                    <h3 className='font-bold text-2xl'>Productos más buscados</h3>
+                </div>
             </div>
 
-            <div className="mt-8 mb-40 lg:flex lg:justify-center mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+            <div className="mb-20 lg:flex lg:justify-center lg:mt-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:w-[100%] lg:w-[90%]">
                     <CartasProductos 
