@@ -65,18 +65,18 @@ import flechaDer from '../Img/Icono-derecha-black.png';
 
         <div className="lg:flex lg:justify-center lg:mt-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-0.5 md:w-[100%] lg:w-[90%]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:w-[100%] lg:w-[90%]">
                 {products.map((product) => (
                     <li className="list-none" key={product.product_id}>
-                        <div className="flex justify-center h-full sm:w-full">
-                            <div className="transition-all duration-800 ease-in-out w-[325px] lg:w-[290px] md:w-[60%] h-[auto] cursor-pointer border border-white hover:border-solid hover:border hover:border-black">
+                        <div className="flex justify-center h-full sm:w-full shadow-none lg:shadow-xl lg:rounded-lg">
+                            <div className="transition-all duration-800 ease-in-out lg:w-[290px] w-[80%] h-[auto] cursor-pointer border lg:border-slate-100 border-black lg:rounded-lg hover:border hover:border-black">
                                 <div className="w-[full] h-[250px] relative">
-                                    <img className="absolute inset-0 w-full h-full object-cover" src={imagenesProductos[product.product_id]} alt="" />
+                                    <img className="absolute inset-0 w-full h-full object-cover lg:rounded-lg" src={imagenesProductos[product.product_id]} alt="" />
                                 </div>
                                 <div className="w-[auto] h-[auto] mt-2 p-2">
                                     <p className="text-[18px] w-[100%] h-[100%] mb-5">{product.description}</p>
                                     <p className="text-[18px] w-[100%] h-[100%] mb-5">{product.unit_price}</p>
-                                    <p className="text-[18px] w-[100%] h-[100%] mb-5">{product.amount}</p>
+                                    <p className="text-[18px] w-[100%] h-[100%] ">{product.amount}</p>
                                 </div>
                             </div>
                         </div>
