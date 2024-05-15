@@ -20,5 +20,6 @@ urlpatterns = [
     path('rest/', include('rest_framework.urls', namespace='rest_framework')),
     path('', views.ProductListCreateAPIView.as_view(), name='product-list'),
     path('search/', views.ProductSearchAPIView.as_view(), name='product-search'),
-    path('<int:pk>/', views.ProducDetailAPIView.as_view(), name='product-detail'), 
+    path('<int:pk>/', views.ProducDetailAPIView.as_view(), name='product-detail'),
+    path('cotizacion/', views.CotizacionCreateAPIView.as_view(), name='cotizacion-create'), 
 ]
