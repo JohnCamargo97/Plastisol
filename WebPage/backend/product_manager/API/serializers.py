@@ -48,5 +48,6 @@ class CotizacionSerializer(serializers.ModelSerializer):
             'author',
             'identification',
             'description',
+            'ReceiverAddress'
 
         ]

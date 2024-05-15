@@ -23,6 +23,7 @@ class cotizacion(models.Model):
     author = models.CharField(max_length=50)
     identification = models.CharField(max_length=30)
     description = models.TextField()
+    ReceiverAddress = models.CharField(max_length=50, null=True)
 
     def __str__(self):
         return self.author
