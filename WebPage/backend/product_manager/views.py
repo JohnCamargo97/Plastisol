@@ -1,8 +1,8 @@
 from rest_framework import generics, permissions, authentication
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import product
-from product_manager.API.serializers import ProductSerializer 
+from .models import product, cotizacion
+from product_manager.API.serializers import ProductSerializer, CotizacionSerializer
 from .authentication import TokenAuthentication
 from .API import client_search
 #class home_view(TemplateView):
@@ -33,3 +33,7 @@ class ProductSearchAPIView(generics.GenericAPIView):
             return Response('', status=400)
         results = client_search.perform_search(query, tags=tags)
         return Response(results)
+    
+class CotizacionCreateAPIView(generics.CreateAPIView):
+    serializer_class = CotizacionSerializer
+    

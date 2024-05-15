@@ -18,3 +18,12 @@ class product(models.Model):
     
     def get_category_tags(self):
         return [self.category]
+
+class cotizacion(models.Model):
+    author = models.CharField(max_length=50)
+    identification = models.CharField(max_length=30)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.author
+    

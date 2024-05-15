@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from rest_framework.reverse import reverse
-from product_manager.models import product
+from product_manager.models import product, cotizacion
 
 
 
@@ -39,3 +39,14 @@ class ProductSerializer(serializers.ModelSerializer):
         if request is None:
             return None
         return reverse("product-detail", kwargs={'pk': obj.pk}, request=request)
+    
+
+class CotizacionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = cotizacion
+        fields = [
+            'author',
+            'identification',
+            'description',
+
+        ]
