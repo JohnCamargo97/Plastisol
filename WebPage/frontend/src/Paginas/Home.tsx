@@ -15,7 +15,7 @@ export function Home(){
                 <MainArticle />
             </section>
 
-            <section>
+            <section className='mt-10 mb-40'>
                 <ContenedorCartas />
             </section>
 
