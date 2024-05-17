@@ -34,7 +34,7 @@ export function FormQuote(){
 
                     </div>
 
-                    <div>
+                    <div className="mt-5 md:mt-0">
                         <div>
                             <h3 className="font-semibold mb-1">Descripción</h3>
                             <span className="h-uto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vel iure error porro eos harum inventore deleniti cumque reprehenderit! Illum quasi officiis cumque asperiores necessitatibus libero accusantium neque quo tempora. lorem</span>

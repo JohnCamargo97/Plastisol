@@ -17,7 +17,7 @@ export function ContenedorCartas(){
 
             <div className="lg:flex lg:justify-center mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:w-[100%] lg:w-[90%]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 md:w-[100%] lg:w-[90%]">
                     <CartasProductos 
                         img={imgCafeUno}
                         titulo='Nombre Producto'
