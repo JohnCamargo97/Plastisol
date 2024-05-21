@@ -36,4 +36,5 @@ class ProductSearchAPIView(generics.GenericAPIView):
     
 class CotizacionCreateAPIView(generics.CreateAPIView):
     serializer_class = CotizacionSerializer
+    permission_classes = [permissions.AllowAny] 
     
