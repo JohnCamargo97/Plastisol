@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import ImgForm from '../Img/ImagenForm.png';
-import flechaDer from '../Img/Icono-derecha-black.png';
+
+import ImgForm from '../Img/ImagenForm.png'
 
 export function FormQuote() {
     const [formData, setFormData] = useState({
@@ -10,8 +10,6 @@ export function FormQuote() {
         description: '',
         ReceiverAddress: ''
     });
-    
-    const [successMessage, setSuccessMessage] = useState(''); // Estado para el mensaje de éxito
 
     const handleChange = (e) => {
         setFormData({
@@ -25,16 +23,10 @@ export function FormQuote() {
         try {
             const response = await axios.post('http://127.0.0.1:8000/API/products/cotizacion/', formData);
             console.log('Success:', response.data);
-            setSuccessMessage('Enviado con éxito'); // Mostrar el mensaje de éxito
-            setTimeout(() => {
-                setSuccessMessage(''); // Ocultar el mensaje después de 3 segundos
-            }, 3000);
+            // Manejar la respuesta exitosa, como limpiar el formulario o mostrar un mensaje de éxito
         } catch (error) {
             console.error('Error:', error);
-            setSuccessMessage('Error al enviar'); // Mostrar el mensaje de error
-            setTimeout(() => {
-                setSuccessMessage(''); // Ocultar el mensaje después de 3 segundos
-            }, 3000);
+            // Manejar el error, como mostrar un mensaje de error
         }
     };
 
@@ -100,6 +92,7 @@ export function FormQuote() {
                                     Enviar
                                 </button>
                             </div>
+
                         </div>
 
                         <div className='hidden sm:flex items-center justify-center'>
@@ -107,15 +100,9 @@ export function FormQuote() {
                                 <img className='w[100%] h-[100%]' src={ImgForm} alt="" />
                             </div>
                         </div>
+
                     </div>
                 </form>
-
-                {successMessage && (
-                    <div className="flex items-center mt-4 p-4 border rounded bg-green-100 text-green-700">
-                        <img className="w-[22px] h-[22px]" src={flechaDer} alt="" />{successMessage}
-                    </div>
-                )}
-                
             </div>
         </>
     );
