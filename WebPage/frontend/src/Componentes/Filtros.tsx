@@ -33,16 +33,16 @@ function BarraBusqueda({ onSearchResults, onClearSearch }) {
 
     return (
         
-        <section className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-6 mt-5 mb-5'>
+        <section className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-6 my-5">
 
-            <div className='border-t-[1px] border-black flex justify-center lg:justify-between items-center h-[100px] w-[100%]'>
+            <div className="border-t-[1px] border-black md:flex md:justify-between md:items-center h-[150px] w-[100%] md:h-[100px]">
 
-                <div>
-                    <h3 className='font-bold text-5xl'>Productos</h3>
+                <div className="my-4">
+                    <h3 className="font-bold text-5xl">Productos</h3>
                 </div>
 
-                <div className='lg:py-5'>
-                    <div className='bg-white w-full flex justify-between items-center cursor-pointer rounded border-2 border-black'>
+                <div className="lg:py-5">
+                    <div className="bg-white w-full flex justify-between items-center cursor-pointer rounded border-2 border-black">
                         <input
                             className="w-[300px] md:w-[50%] h-[50px] outline-none border-none p-4"
                             type="text"
@@ -51,7 +51,7 @@ function BarraBusqueda({ onSearchResults, onClearSearch }) {
                             onChange={handleInputChange}
                             onKeyUp={handleKeyUp}
                         />
-                        <img className='w-[20px] h-[20px] mr-2' src={buscar} alt="" />
+                        <img className="w-[20px] h-[20px] mr-2" src={buscar} alt="" />
                     </div>
                 </div>
 

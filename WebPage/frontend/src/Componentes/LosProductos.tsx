@@ -65,7 +65,7 @@ import flechaDer from '../Img/Icono-derecha-black.png';
 
         <div className="lg:flex lg:justify-center lg:mt-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 md:w-[100%] lg:w-[90%]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 md:w-[100%] lg:w-[90%]">
                 {products.map((product) => (
                     <li className="list-none" key={product.product_id}>
                         <div className="flex justify-center h-full sm:w-full shadow-none lg:shadow-xl lg:rounded-lg transition-all ease-in-out delay-250 hover:-translate-y-2 duration-500 will-change-transform">
@@ -90,22 +90,22 @@ import flechaDer from '../Img/Icono-derecha-black.png';
 
             <div className="flex justify-center w-[100%]">
 
-                <div className="w-[80%] sm:w-[50%] lg:w-[35%] xl:w-[30%] flex justify-between">
+                <div className="w-[80%] sm:w-[50%] lg:w-[30%] xl:w-[30%] flex justify-between">
 
                     <button
-                        className= "botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold px-4 border-b-[1px] border-black  flex items-center justify-center transition-all duration-700 ease-in-out"
+                        className= "botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-1 px-2 border-b-[2px] border-black  flex items-center transition-all duration-700 ease-in-out"
                         onClick={handlePrevPage}
                         disabled={!prevPage}>
-                        <img className="w-[20px] h-[20px] mr-2" src={flechaIzq} alt="" />
+                        <img className="w-[22px] h-[22px] " src={flechaIzq} alt="" />
                         Anterior
                     </button>
                     
                     <button
-                        className="botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-1 px-4 border-b-[1px] border-black flex items-center transition-all duration-700 ease-in-out"
+                        className="botones-siguiente bg-white hover:bg-black text-black hover:text-white font-bold py-1 px-2 border-b-[2px] border-black flex items-center transition-all duration-700 ease-in-out"
                         onClick={handleNextPage}
                         disabled={!nextPage}>
                         Siguiente
-                        <img className="w-[20px] h-[20px] ml-2" src={flechaDer} alt="" />
+                        <img className="w-[22px] h-[22px] " src={flechaDer} alt="" />
                     </button>
 
                 </div>
