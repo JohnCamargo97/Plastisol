@@ -44,7 +44,7 @@ function BarraBusqueda({ onSearchResults, onClearSearch }) {
                 <div className="lg:py-5">
                     <div className="bg-white w-full flex justify-between items-center cursor-pointer rounded border-2 border-black">
                         <input
-                            className="w-[300px] md:w-[50%] h-[50px] outline-none border-none p-4"
+                            className="w-[200px] h-[50px] outline-none border-none p-4"
                             type="text"
                             placeholder="Buscar"
                             value={query}

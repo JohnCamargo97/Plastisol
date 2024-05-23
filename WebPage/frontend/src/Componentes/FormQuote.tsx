@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import axios from 'axios';
 
-import ImgForm from '../Img/ImagenForm.png'
+import axios from 'axios';
+import ImgForm from '../Img/ImagenForm.png';
+import Alert from './Alert';
 
 export function FormQuote() {
     const [formData, setFormData] = useState({
@@ -11,6 +12,9 @@ export function FormQuote() {
         ReceiverAddress: ''
     });
 
+    const [alertMessage, setAlertMessage] = useState(null);
+    const [alertType, setAlertType] = useState('');
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -18,15 +22,28 @@ export function FormQuote() {
         });
     };
 
+    const handleCloseAlert = () => {
+        setAlertMessage(null);
+        setAlertType('');
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post('http://127.0.0.1:8000/API/products/cotizacion/', formData);
             console.log('Success:', response.data);
-            // Manejar la respuesta exitosa, como limpiar el formulario o mostrar un mensaje de éxito
+            setAlertMessage('Cotización enviada exitosamente.');
+            setAlertType('success');
+            setFormData({
+                author: '',
+                identification: '',
+                description: '',
+                ReceiverAddress: ''
+            });
         } catch (error) {
             console.error('Error:', error);
-            // Manejar el error, como mostrar un mensaje de error
+            setAlertMessage('Hubo un error al enviar la cotización. Por favor, inténtelo de nuevo.');
+            setAlertType('error');
         }
     };
 
@@ -92,7 +109,6 @@ export function FormQuote() {
                                     Enviar
                                 </button>
                             </div>
-
                         </div>
 
                         <div className='hidden sm:flex items-center justify-center'>
@@ -100,12 +116,15 @@ export function FormQuote() {
                                 <img className='w[100%] h-[100%]' src={ImgForm} alt="" />
                             </div>
                         </div>
-
                     </div>
                 </form>
+
+                <Alert message={alertMessage} type={alertType} onClose={handleCloseAlert} />
+
             </div>
         </>
     );
 }
 
 export default FormQuote;
+

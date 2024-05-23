@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+
 import Filtros from '../Componentes/Filtros'
 import axios from "axios";
 import Footer from "./Footer";
-import '../styles/plastisol.css'
+
 
 import imgCafeUno from '../Img/CafeUno.jpg';
 import imgCafeDos from '../Img/CafeDos.jpg';
@@ -74,9 +75,9 @@ import flechaDer from '../Img/Icono-derecha-black.png';
                                     <img className="absolute inset-0 w-full h-full object-cover rounded-lg" src={imagenesProductos[product.product_id]} alt="" />
                                 </div>
                                 <div className="w-[auto] h-[auto] mt-2 p-2">
-                                    <p className="font-semibold text-[18px] w-[100%] h-[100%] mb-5">{product.description}</p>
-                                    <p className="text-[18px] w-[100%] h-[100%] mb-5">${product.unit_price}</p>
-                                    <p className="text-[18px] w-[100%] h-[100%] ">{product.amount}</p>
+                                    <p className="text-[16px] w-[100%] h-[100%] font-bold mb-5">{product.description}</p>
+                                    <p className="text-[14px] text-gray-600 w-[100%] h-[100%] font-semibold mb-5">Unidades: {product.amount}</p>
+                                    <p className="text-[16px] text-gray-600 w-[100%] h-[100%] font-semibold">${product.unit_price}</p>
                                 </div>
                             </div>
                         </div>
