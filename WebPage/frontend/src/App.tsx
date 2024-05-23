@@ -4,6 +4,7 @@ import { Productos } from './Paginas/Productos';
 import { Forms } from './Paginas/Forms';
 
 import './App.css'
+import './styles/plastisol.css'
 
 
 function App() {

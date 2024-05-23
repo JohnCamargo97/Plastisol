@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 import FotoUno from '../Img/FotoUno.jpg';
 import FotoDos from '../Img/FotoDos.jpg';
 import FotoTres from '../Img/FotoTres.jpg';
