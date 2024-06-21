@@ -1,0 +1,24 @@
+.body {
+    font-family: Source Sans Pro, Arial, sans-serif;
+    color: #1a1a1a;
+}
+
+.barcode {
+    text-align: center;
+    height: 150px;
+    width: 250px;
+
+}
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  }
